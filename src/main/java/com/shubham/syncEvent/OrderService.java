@@ -9,6 +9,10 @@ public class OrderService {
         eventBus.register(CreateOrderEvent.class, new PaymentService());
         eventBus.register(CreateOrderEvent.class, new InventoryService());
         eventBus.register(CreateOrderEvent.class, new NotificationService());
-        eventBus.publish(createOrderEvent);
+        try {
+            eventBus.publish(createOrderEvent);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
