@@ -9,5 +9,6 @@ public class OrderService {
 
         CreateOrderEventBus eventBus = new CreateOrderEventBus();
         eventBus.publish(createOrderEvent);
+        eventBus.shutDown();
     }
 }

@@ -10,10 +10,6 @@ public class CreateOrderEvent extends Event {
         this.createdAt = Instant.now();
     }
 
-    public String getId() {
-        return id;
-    }
-
     @Override
     public EventType getEventType() {
         return EventType.CREATE_ORDER;
