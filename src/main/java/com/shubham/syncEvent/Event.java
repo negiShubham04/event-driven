@@ -9,4 +9,8 @@ public abstract class Event {
     EventType eventType;
 
     public abstract EventType getEventType();
+
+    public String getId() {
+        return id;
+    }
 }
